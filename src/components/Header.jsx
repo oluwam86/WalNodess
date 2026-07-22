@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Heart, Settings, Copy, Check } from 'lucide-react'
+import Logo from './Logo'
 
 function Header() {
   const [copied, setCopied] = useState(false)
@@ -18,7 +19,7 @@ function Header() {
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ backgroundColor: 'var(--accentBlue)' }}>
-              <span className="text-white font-bold text-xl">◆</span>
+              <Logo size={32} />
             </div>
             <h1 className="text-4xl font-bold" style={{ color: 'var(--foregroundPrimary)' }}>Tonviewer</h1>
           </div>
