@@ -1,5 +1,6 @@
 import React from 'react'
 import { Github, Twitter, Mail } from 'lucide-react'
+import Logo from './Logo'
 
 function Footer() {
   return (
@@ -9,7 +10,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">◆</span>
+                <Logo size={20} />
               </div>
               <span className="font-bold text-white">Tonviewer</span>
             </div>
