@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --backgroundPrimary: #10161f;
+  --backgroundSecondary: #1d2633;
+  --backgroundTertiary: #2e3847;
+  --backgroundQuaternary: #262f3d;
+  --foregroundPrimary: #ffffff;
+  --foregroundSecondary: #8994a3;
+  --foregroundTertiary: #556170;
+  --foregroundInverted: #000000;
+  --constantBlack: #000000;
+  --constantWhite: #ffffff;
+  --accentBlue: #319ce3;
+  --accentGreen: #39cc83;
+  --accentRed: #ff4766;
+  --accentOrange: #f5a73b;
+  --accentPurple: #972cf5;
+  --separatorCommon: rgba(194, 218, 255, 0.08);
+  --titleLinearColor: linear-gradient(91.03deg, #89b8ff 4.02%, #213dd1 26.85%);
+  --shadowGradient: linear-gradient(270deg, #213549 40%, rgba(255, 255, 255, 0));
+  --overlayModal: rgba(0, 0, 0, 0.64);
+}
+
+body {
+  background-color: var(--backgroundPrimary);
+  color: var(--foregroundPrimary);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--backgroundSecondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--backgroundTertiary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--backgroundQuaternary);
+}
+
+.glassmorphism {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(71, 85, 105, 0.2);
+}
+
+.gradient-chart {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Global Search Input */
+#global_search,
+.global-search,
+input[type="text"] {
+  background-color: var(--backgroundSecondary);
+  border: 1px solid var(--separatorCommon);
+  color: var(--foregroundPrimary);
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: system-ui, -apple-system, sans-serif;
+  transition: all 0.2s ease;
+}
+
+#global_search::placeholder,
+.global-search::placeholder,
+input[type="text"]::placeholder {
+  color: var(--foregroundSecondary);
+}
+
+#global_search:focus,
+.global-search:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accentBlue);
+  box-shadow: 0 0 0 3px rgba(49, 156, 227, 0.1);
+  background-color: var(--backgroundTertiary);
+}
+
+#global_search:hover:not(:focus),
+.global-search:hover:not(:focus),
+input[type="text"]:hover:not(:focus) {
+  border-color: var(--separatorCommon);
+  background-color: var(--backgroundTertiary);
+}
